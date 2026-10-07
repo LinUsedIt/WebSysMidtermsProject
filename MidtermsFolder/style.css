@@ -1,0 +1,277 @@
+/* ==========================================================
+   style.css - Graphics and Compression Learning Site
+   Loaded LAST, after Bootstrap, so these rules win.
+   Colors are plain hex codes:
+     #120d0a  page background (black-brown)
+     #1c1510  table and card background
+     #ffa500  orange: titles, borders, nav bar
+     #cc8400  dark orange: active link, button press
+     #f0e6d8  cream: body text
+   ========================================================== */
+
+/* ---------- 1. Bootstrap dark theme overrides ---------- */
+:root {
+    --bs-body-bg: #120d0a;
+    --bs-body-color: #f0e6d8;
+    --bs-body-font-family: "Space Grotesk", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    --bs-link-color: #ffa500;
+    --bs-link-hover-color: #cc8400;
+}
+
+/* ---------- 2. Base ---------- */
+body {
+    background-color: #120d0a;
+    color: #f0e6d8;
+    /* MODULE 2 - Font: sans-serif web font (Space Grotesk) with fallbacks */
+    font-family: "Space Grotesk", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    /* MODULE 2 - Leading: body line-height between 1.4 and 1.6 */
+    line-height: 1.5;
+    /* MODULE 2 - Kerning: normal letter-pair spacing */
+    font-kerning: normal;
+}
+
+/* Visible outline when a link, button or input is reached by keyboard */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #ffa500;
+    outline-offset: 2px;
+}
+
+/* ---------- 3. Typography ---------- */
+/* MODULE 2 - Tracking: letter-spacing on all headings */
+h1,
+h2,
+h3 {
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+}
+
+/* Page title: one per page, centered, orange */
+.page-title {
+    text-align: center;
+    color: #ffa500;
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+/* Section title (h2) */
+.section-title {
+    color: #ffa500;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Smaller title under a section (h3) */
+.section-subtitle {
+    color: #f0e6d8;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+/* Every paragraph the user writes */
+.content-text {
+    max-width: 70ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* MODULE 2 - Tracking: letter-spacing on every image label and caption */
+.image-label {
+    font-size: 0.875rem;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* ---------- 4. Layout ---------- */
+/* Navbar: orange bar with dark text */
+.site-nav {
+    background-color: #ffa500;
+}
+
+.site-nav .navbar-brand {
+    color: #120d0a;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+/* MODULE 2 - Tracking: letter-spacing on nav labels */
+.site-nav .nav-link {
+    color: #120d0a;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 6px;
+}
+
+/* Hover: color AND background change */
+.site-nav .nav-link:hover {
+    background-color: #120d0a;
+    color: #ffa500;
+}
+
+/* Current page link: bold, dark orange background, underlined */
+.site-nav .nav-link.active {
+    background-color: #cc8400;
+    color: #120d0a;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* Menu button on phones: dark icon and border on the orange bar */
+.site-nav .navbar-toggler {
+    border-color: #120d0a;
+}
+
+.site-nav .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Keyboard outline must be dark on the orange bar */
+.site-nav a:focus-visible,
+.site-nav button:focus-visible {
+    outline-color: #120d0a;
+}
+
+/* Main container: centered box, smaller than the screen */
+.main-container {
+    width: calc(100% - 2rem);
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #1c1510;
+    border: 3px solid #ffa500;
+    border-radius: 10px;
+}
+
+/* Footer */
+.site-footer {
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 3px solid #ffa500;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+}
+
+/* ---------- 5. Components ---------- */
+/* Images and the inline SVG: never wider than the box, tall ones (the ghost) are capped */
+.main-container figure img,
+.main-container figure svg,
+.main-container td img {
+    width: auto;
+    max-width: 100%;
+    max-height: 320px;
+}
+
+/* The inline SVG has no fixed size of its own, so give it a height */
+.main-container figure svg {
+    height: 320px;
+}
+
+/* Buttons on the home page: orange outline, fills on hover */
+.btn-outline-warning {
+    --bs-btn-color: #ffa500;
+    --bs-btn-border-color: #ffa500;
+    --bs-btn-hover-bg: #ffa500;
+    --bs-btn-hover-color: #120d0a;
+    --bs-btn-hover-border-color: #ffa500;
+    --bs-btn-active-bg: #cc8400;
+    --bs-btn-active-color: #120d0a;
+    --bs-btn-active-border-color: #cc8400;
+    letter-spacing: 0.05em;
+}
+
+/* All tables (comparison, audio, specs): dark panel with orange lines */
+.table {
+    --bs-table-bg: #1c1510;
+    --bs-table-color: #f0e6d8;
+    --bs-table-border-color: #ffa500;
+}
+
+/* MODULE 2 - Tracking: letter-spacing on table headers (labels) */
+.table th {
+    color: #ffa500;
+    letter-spacing: 0.05em;
+}
+
+/* Spec table at the bottom of every page */
+.specs-table {
+    font-size: 0.875rem;
+}
+
+/* Audio players fit inside their table cell */
+.audio-table audio {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Zoom widget: a fixed window that hides anything zoomed outside of it */
+.zoom-window {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background-color: #120d0a;
+    border: 2px solid #ffa500;
+    border-radius: 6px;
+}
+
+/* Both images are centered in their window and grow from the middle */
+.zoom-window img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: none;
+}
+
+/* Raster: starts as wide as the window. Pixelated so the squares show when zoomed in */
+.zoom-raster {
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+/* Vector: starts as tall as the window. It stays sharp at any zoom */
+.zoom-vector {
+    height: 100%;
+    width: auto;
+}
+
+/* ---------- 6. Responsive ---------- */
+/* Tablets and phones */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 1.75rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .main-container {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        padding: 0.75rem;
+    }
+
+    .table {
+        font-size: 0.8rem;
+    }
+}

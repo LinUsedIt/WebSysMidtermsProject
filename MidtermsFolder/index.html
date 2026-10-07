@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - Graphics and Compression Learning Site</title>
+
+    <!-- Link order: Bootstrap CSS first, then the font, then style.css LAST -->
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVBAR: same on every page. Bootstrap collapses it on small screens. -->
+    <header>
+        <nav class="navbar navbar-expand-md site-nav">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Graphics &amp; Compression</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu"
+                    aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav-menu">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- The link for the current page has class "active" -->
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="graphics.html">Graphics</a></li>
+                        <li class="nav-item"><a class="nav-link" href="compression.html">Compression</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTAINER: centered box that holds the page content -->
+    <main class="main-container container">
+        <h1 class="page-title">Graphics and Compression Learning Site</h1>
+
+        <!-- Quick introduction -->
+        <p class="content-text">
+            <!-- CONTENT-TODO [home-intro]: quick introduction to the website | below the page title | 3-4 sentences -->
+        </p>
+
+        <!-- Three sample images side by side (stack on phones) -->
+        <section class="row row-cols-1 row-cols-md-3 g-4 text-center" aria-label="Sample images">
+            <figure class="col">
+                <img class="img-fluid" src="assets/images/4.webp" alt="Raster graphic sample (placeholder)" width="640"
+                    height="360">
+                <figcaption class="image-label">
+                    <!-- CONTENT-TODO [home-img-label-raster]: label for the raster sample | under the 1st image | 1 short line -->
+                </figcaption>
+            </figure>
+            <figure class="col">
+                <img class="img-fluid" src="assets/images/Ghost.svg" alt="Vector graphic sample: a ghost" width="210"
+                    height="297">
+                <figcaption class="image-label">
+                    <!-- CONTENT-TODO [home-img-label-vector]: label for the vector sample | under the 2nd image | 1 short line -->
+                </figcaption>
+            </figure>
+            <figure class="col">
+                <img class="img-fluid" src="assets/images/4.webp" alt="Compression sample (placeholder)" width="640"
+                    height="360">
+                <figcaption class="image-label">
+                    <!-- CONTENT-TODO [home-img-label-compression]: label for the compression sample | under the 3rd image | 1 short line -->
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Buttons that link to the other pages -->
+        <div class="d-flex flex-wrap justify-content-center gap-3 my-4">
+            <a class="btn btn-outline-warning" href="graphics.html">Learn Graphics</a>
+            <a class="btn btn-outline-warning" href="compression.html">Learn Compression</a>
+        </div>
+
+        <!-- TECHNICAL MEDIA SPEC TABLE: added in Stage 6 -->
+        <section class="specs-section" id="specs-section">
+            <h2 class="section-title">Technical Media Specs</h2>
+            <!-- One row for each image or audio file used on this page. Values come from specs/assets.md -->
+            <div class="table-responsive">
+                <table class="table specs-table">
+                    <caption class="visually-hidden">Technical media specs for the files used on this page</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Asset Name &amp; File Format</th>
+                            <th scope="col">Original Size → Compressed</th>
+                            <th scope="col">Color Depth / Quantization</th>
+                            <th scope="col">Compression Algorithm</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>4.webp (raster sample)</td>
+                            <td>215.8 KB (4.jpeg) → 52.7 KB</td>
+                            <td>24-bit RGB (8 bits per channel)</td>
+                            <td>Lossy (WebP: VP8 prediction + transform)</td>
+                        </tr>
+                        <tr>
+                            <td>Ghost.svg (vector sample)</td>
+                            <td>17.9 KB → 17.9 KB (unchanged)</td>
+                            <td>n/a (vector: shapes and gradients)</td>
+                            <td>None (XML text)</td>
+                        </tr>
+                        <tr>
+                            <td>4.webp (compression sample)</td>
+                            <td>215.8 KB (4.jpeg) → 52.7 KB</td>
+                            <td>24-bit RGB (8 bits per channel)</td>
+                            <td>Lossy (WebP: VP8 prediction + transform)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER: same on every page -->
+    <footer class="site-footer text-center">
+        <p>Copyright Emmanuel II Velasco 2026</p>
+    </footer>
+
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

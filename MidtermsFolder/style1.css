@@ -1,0 +1,46 @@
+body {
+    background-color: #120d0a;
+}
+
+.navbar {
+    text-align: center;
+    padding: 1rem;
+    background: #ffa500;
+    color: #f0e6d8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    /*color: #ffa500;*/
+}
+
+.main-block {
+    border-style: solid;
+    border-color: #ffa500;
+    border-width: 3px;
+    border-radius: 10px;
+    margin: 100px;
+    padding: 20px;
+    color: white;
+    align-self: center;
+}
+
+.page-title {
+    text-align: center;
+    color: #ffa500;
+    font-weight: 100;
+}
+
+.paragraph-block {
+    margin: 10px;
+    text-align: justify;
+}
+
+.image-type1 {
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
